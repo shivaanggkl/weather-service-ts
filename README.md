@@ -21,3 +21,18 @@ GET /weather?lat=<number>&lon=<number>
   "source": "api.weather.gov"
 }
 ```
+
+### Testing
+
+weather.test.ts covers:
+
+400 error for invalid lat/lon
+
+Happy path with mocked NWS data (schema, temp mapping, category)
+
+Fallback when "Today" is missing
+
+Celsius → Fahrenheit conversion
+
+Run with:
+npm test
